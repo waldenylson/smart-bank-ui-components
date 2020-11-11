@@ -1,0 +1,50 @@
+// imports
+@import '../../../assets/styles/style.scss';
+
+$spacing: 4px 8px;
+$border-radius:5px;
+
+.s-chip {
+    padding: $spacing;
+    border-radius: $border-radius;
+    margin: 0;
+    display: inline;
+    position: relative;
+    @include text(0.8rem, 600);
+}
+
+// CHIPS COLORS THEMES
+$primary:('color':#01a3ff,
+    'background': #bee1f5);
+$success:('color': #1eba62,
+    'background': #d4fae5);
+$danger:('color': #e950ca,
+    'background': #ffddf3);
+
+// MERGE THEMES
+$chip-themes-color: (
+    'primary':$primary,
+    'success': $success,
+    'danger': $danger
+    ) !default;
+
+@each $name,
+$theme in $chip-themes-color {
+    .s-chip-#{$name} {
+        color: map-get($theme, 'color');
+        background: map-get($theme, 'background');
+    }
+}
+
+// CHIP SIZE
+
+$chip-size:(
+    'small': 3.3px 7.1px,
+    'large': 6px 12px
+)!default;
+
+@each $name, $size in $chip-size {
+   .s-chip-#{$name}{
+       padding:$size;
+   }
+}

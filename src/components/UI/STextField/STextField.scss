@@ -1,0 +1,47 @@
+@import '@/assets/styles/style.scss';
+$text-field-transition-duration:0.28s !default;
+$text-field-border-radius:11.5px !default;
+$text-field-font-weight:600 !default;
+$text-field-font-size:0.9rem !default;
+$text-field-label-size:0.8rem !default;
+$text-field-line-height:20px !default;
+.s-text-field{
+    padding: 10px 20px;
+    max-width: 100%;
+    min-width: 0px;
+    width: 100%;
+    border-radius: $text-field-border-radius;
+    box-shadow:  9px 9px 18px #cccccc38, 
+    -9px -9px 18px #ffffff73;
+    background: $white;
+    input{
+        @include text($text-field-font-size, $text-field-font-weight);
+        line-height:$text-field-line-height;
+        border: 0;
+        width: 100%;
+        color: $gray-darken-4;
+        &:focus{
+            outline: none;
+        }
+    }
+    label{
+        color: $gray-darken-1;
+        @include text($text-field-label-size)
+    }
+    input,
+    label{
+        display: block;
+    }
+    small{
+        color: $pink;
+        position: absolute;
+        margin-top: 15px;
+        left: 50px;
+    }
+}
+.s-text-field-outlined{
+    border: 1.5px solid $gray-ligth-1;
+}
+.error{
+    border: solid 0.125rem $pink;
+}

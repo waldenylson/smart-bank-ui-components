@@ -1,0 +1,7 @@
+@import '../../../../assets/styles/style.scss';
+.s-card-title{
+    @include text(1.17rem, 500);
+    color: $gray-darken-3;
+    padding: 10px 16px 5px 16px;
+    margin:0;
+}

@@ -1,0 +1,14 @@
+@mixin text($size:1rem, $weight:400) {
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin size($height:auto, $width:auto) {
+    height: $height;
+    width: $width;
+}
+
+@mixin hover($transition:2s){
+    cursor: pointer;
+    transition-duration: $transition;
+}

@@ -1,0 +1,8 @@
+@import '../../../../assets/styles/style.scss';
+
+.s-card-text{
+    width: 100%;
+    color: $gray-darken-1;
+    @include text(0.9rem);
+    padding: 0 16px 10px 16px;
+}

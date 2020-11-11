@@ -1,0 +1,25 @@
+@import './variables';
+
+$colors: 
+'gray-darken-1' $gray-darken-1,
+'gray-darken-3' $gray-darken-3,
+'gray-darken-4' $gray-darken-4,
+'gray-ligth-1' $gray-ligth-1,
+'gray-ligth-3' $gray-ligth-3,
+'gray-ligth-2' $gray-ligth-2,
+'gray-ligth-4' $gray-ligth-4,
+'red-darken-4' $red-darken-4,
+'red-darken-3' $red-darken-3,
+'red-darken-2' $red-darken-2,
+'blue' $blue,
+'purple' $purple,
+'pink' $pink,
+'green' $green,
+;
+
+@each $color in $colors{
+  .#{nth($color, 1)} {
+    background: #{nth($color, 2)};
+  }
+}
+

@@ -1,0 +1,129 @@
+@import '../../assets/styles/style.scss';
+.user-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    width: 300px;
+
+    .user-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            @include text(1rem, 600)
+        }
+
+        h3 {
+            @include text(1.5rem, 600);
+
+            span {
+                @include text(1rem, 600);
+                color: $gray-darken-3;
+            }
+        }
+
+        @include lt-md {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .user-revenues {
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 10px;
+
+        i {
+            color: $primary;
+        }
+
+        .revenue-item {
+            margin-left: 10px;
+
+            h2 {
+                @include text(1.2rem, 600);
+                margin: 0;
+            }
+
+            h3 {
+                @include text(0.95rem);
+                color: $gray-ligth-1;
+                margin-bottom: 10px;
+            }
+
+        }
+
+        .divider {
+            width: 3px;
+            background: $gray-ligth-3;
+            border: none;
+            margin-top: 20px;
+        }
+    }
+
+    .user-credit-card {
+        width: 100%;
+        height: 240px;
+        padding-top: 10px;
+        padding-right: 10px;
+        overflow-y: scroll;
+        border-radius: 12.3px;
+        .credit-card-item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1vh;
+            padding: 20px;
+            color: $gray-darken-1;
+            border-radius: 18px;
+            &:hover {
+                background: $primary;
+                cursor: pointer;
+                color: $white !important;
+
+                .credit-card-info>h3,
+                button {
+                    color: $white;
+                }
+            }
+        }
+
+        i {
+            @include text(30px);
+        }
+
+        .credit-card-info {
+            h2 {
+                @include text(0.95rem);
+                margin-bottom: 3px;
+            }
+
+            h3 {
+                margin: 0;
+                @include text(1.1rem, 600);
+                color: $gray-darken-4;
+            }
+        }
+
+        @include lt-md {
+            height: 250px;
+        }
+
+        .active {
+            background: $primary;
+            color: $white;
+
+            .credit-card-info h3 {
+                color: $white;
+            }
+
+            button {
+                color: $white;
+            }
+        }
+    }
+}

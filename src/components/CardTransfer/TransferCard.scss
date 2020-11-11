@@ -1,0 +1,12 @@
+@import '../../assets/styles/style.scss';
+.transfer-card-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    >div{
+        margin-top: 10px;
+    }
+    @include lt-md{
+            justify-content: center;
+    }
+}

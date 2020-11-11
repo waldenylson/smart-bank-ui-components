@@ -1,0 +1,30 @@
+@import '../../assets/styles/style.scss';
+.tabs-container {
+    font-family: $font-family-default;
+    @include text(1rem, 600);
+    nav {
+        flex: 0 0 40%;
+
+        a {
+            color: $gray-darken-1;
+            @include lt-md{
+                @include text(0.9rem)
+            }
+        }
+    }
+    .default-module_item--active_2dOoK {
+        color: $gray-darken-4 !important;
+        border-color: $primary !important;
+    }
+    .default-module_items_3HxZS {
+        border: none;
+    }
+    .default-module_item_3XAy- {
+        border-bottom: solid 2px transparent;
+    }
+}
+
+.tab-item {
+    overflow-y: scroll;
+    height: 350px;
+}

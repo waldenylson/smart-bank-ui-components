@@ -1,0 +1,26 @@
+@import '@/assets/styles/style.scss';
+$card-border-radius:10px;
+$card-box-shadow: 9px 9px 18px #cccccc38,
+-9px -9px 18px #ffffff73;
+
+.s-card {
+    background: $white;
+    border-radius: $card-border-radius;
+    box-shadow:$card-box-shadow;
+    max-width: 100%;
+    display: block;
+    margin: 10px;
+    position: relative;
+    overflow-x: hidden;
+    @include lt-md{
+        margin: 5px 10px;
+    }
+}
+
+.s-card-center{
+    display: flex;
+    justify-content: center;
+}
+
+
+

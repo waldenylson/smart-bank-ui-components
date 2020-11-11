@@ -1,0 +1,47 @@
+@import '../../../assets/styles/style.scss';
+.table-container {
+    width: 100%;
+    border-collapse: collapse; 
+    tr {
+      
+        text-align: left;
+        @include text(1rem, 400);
+        td{
+            border-bottom: 1px solid rgba(228, 228, 228, 0.363);
+            padding: 20px 10px;
+        }
+        th {
+            padding-left: 10px;
+            @include text(1rem, 500);
+            color: $gray-darken-4;
+        }
+    }
+    h2,
+    h3 {
+        @include text(1rem, 400);
+        margin: 0;
+    }
+    h3 {
+        color: $gray-ligth-1;
+    }
+    .cell_place {
+        display: flex;
+    }
+    .cell_place_title {
+        padding-left: 10px;
+    }
+    .cell_cashback{
+        .spot{
+            color: $primary;
+        }
+    }
+    @include lt-md{
+          tr{
+            @include text(0.8rem, 400);
+          } 
+          .cell_place{
+              width: 200px;
+              padding-right: 5px;
+          }
+    }
+}

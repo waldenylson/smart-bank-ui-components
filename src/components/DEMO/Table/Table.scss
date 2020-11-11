@@ -1,0 +1,19 @@
+@import '../../UI/STable/STable.scss';
+
+
+$green: #690;
+$red:#905;
+$blue:#07a;
+.td-type{
+    color:$green;
+}
+
+$types:
+'false'$red,
+'undefined' $blue;
+
+@each $type in $types {
+    .td-default-#{nth($type, 1)} {
+        color: #{nth($type, 2)};
+    }
+}
