@@ -4,7 +4,7 @@
       <s-card>
         <s-card-title>
           <div class="layout-title">
-            <h1><span>#</span>Buttons</h1>
+            <h1><span>#</span>Avatars</h1>
           </div>
         </s-card-title>
         <div class="container-fluid">
